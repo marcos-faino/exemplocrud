@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
+    <br>
     <h1>
         Crud Produtos
     </h1>
     <br>
     <p>
-        <a href="#" class="btn btn-primary">Adicionar Produtos</a>
+        <a href="{% url 'addproduto' %}" class="btn btn-primary">Adicionar Produtos</a>
+    </p>
+
+    <p>
+        <a href="{% url 'cadcateg' %}" class="btn btn-secondary">Adicionar Categorias</a>
     </p>
 
 

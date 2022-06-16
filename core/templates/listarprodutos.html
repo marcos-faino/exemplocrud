@@ -12,6 +12,7 @@
         <th>Descrição</th>
         <th>Preço</th>
         <th>Quantidade</th>
+        <th>Categoria</th>
         <th>Ação</th>
     </tr>
   </thead>
@@ -22,12 +23,14 @@
         <td>{{ p.descricao }}</td>
         <td>{{ p.preco }}</td>
         <td>{{ p.quantidade }}</td>
+        <td>{{ p.categoria.descricao }}</td>
         <td>
-            <a href="#" class="btn btn-warning">Editar</a>&nbsp;&nbsp;
-            <a href="#" class="btn btn-danger">Excluir</a>
+            <a href="{% url 'updateproduto' p.id %}" class="btn btn-warning">Editar</a>&nbsp;&nbsp;
+            <a href="{% url 'delproduto' p.id %}" class="btn btn-danger">Excluir</a>
         </td>
     </tr>
   {% endfor %}
   </tbody>
 </table>
+<a href="{% url 'addproduto' %}" class="btn btn-dark">+</a>
 {% endblock %}

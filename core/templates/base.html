@@ -9,6 +9,14 @@
     <title>Exemplo Crud</title>
 </head>
 <body>
+    <div class="bg-dark text-white row">
+        <div class="col-1">
+            <a href="{% url 'index' %}" class="btn btn-warning">Voltar</a>
+        </div>
+        <div class="col-11 text-center">
+            <h2>Ifro - Campus Ariquemes</h2>
+        </div>
+    </div>
     <div class="container text-center">
         {% block conteudo %} {% endblock %}
     </div>
